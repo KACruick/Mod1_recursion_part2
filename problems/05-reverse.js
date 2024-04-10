@@ -4,20 +4,25 @@ it reversed.
 
 Examples:
 
-reverse("house"); // "esuoh"
-reverse("dog"); // "god"
-reverse("atom"); // "mota"
-reverse("q"); // "q"
-reverse("id"); // "di"
-reverse(""); // ""
+
 ***********************************************************************/
 
 
 function reverse(str) {
-  // Your code here 
+  let letter = str[0]
+
+  if(str.length === 1){
+    return letter
+  }
+  return reverse(str.slice(1)) + letter
 }
 
-
+console.log(reverse("house")); // "esuoh"
+console.log(reverse("dog")); // "god"
+console.log(reverse("atom")); // "mota"
+console.log(reverse("q")); // "q"
+console.log(reverse("id")); // "di"
+// reverse(""); // ""
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
